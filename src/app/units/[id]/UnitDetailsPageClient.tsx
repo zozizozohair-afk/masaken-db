@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, use } from 'react';
+import React, { useEffect, useState } from 'react';
 import { supabase } from '../../../lib/supabaseClient';
 import { Unit, Project, ProjectDocument, UnitModel, DOCUMENT_TYPES } from '../../../types';
 import Link from 'next/link';
@@ -29,7 +29,8 @@ import {
   Image as ImageIcon
 } from 'lucide-react';
 
-export default function UnitDetailsPage({ id }: { id: string }) {
+export default function UnitDetailsPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   
   const [unit, setUnit] = useState<Unit | null>(null);
   const [project, setProject] = useState<Project | null>(null);
