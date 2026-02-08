@@ -24,9 +24,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-export default function ProjectDetails({ params }: { params: Promise<{ id: string }> }) {
-  // Unwrap params using React.use() as per Next.js 15+ patterns for client components
-  const { id } = use(params);
+export default function ProjectDetails({ id }: { id: string }) {
   
   const [project, setProject] = useState<Project | null>(null);
   const [units, setUnits] = useState<any[]>([]);

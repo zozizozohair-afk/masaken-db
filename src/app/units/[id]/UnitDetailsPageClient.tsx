@@ -29,8 +29,7 @@ import {
   Image as ImageIcon
 } from 'lucide-react';
 
-export default function UnitDetailsPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default function UnitDetailsPage({ id }: { id: string }) {
   
   const [unit, setUnit] = useState<Unit | null>(null);
   const [project, setProject] = useState<Project | null>(null);
@@ -498,11 +497,11 @@ export default function UnitDetailsPage({ params }: { params: Promise<{ id: stri
                     <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
                       <ImageIcon size={20} />
                     </div>
-                    <span className="font-medium text-gray-900 truncate flex-1" title={file}>
+                    <span className="font-medium text-gray-900 truncate flex-1" title={typeof file === 'string' ? file : file.url}>
                       صورة {idx + 1}
                     </span>
                     <a 
-                      href={file} 
+                      href={typeof file === 'string' ? file : file.url}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-2 text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
