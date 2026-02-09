@@ -15,7 +15,7 @@
     "next": "15.1.11",
     "react": "latest",
     "react-dom": "latest",
-    "lightningcss": "latest",
+    "lightningcss": "1.24.1",
     "recharts": "^3.7.0"
   },
   "devDependencies": {
