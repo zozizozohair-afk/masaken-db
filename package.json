@@ -12,9 +12,9 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.94.1",
     "lucide-react": "^0.563.0",
-    "next": "15.1.0",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "next": "15.1.11",
+    "react": "latest",
+    "react-dom": "latest",
     "recharts": "^3.7.0"
   },
   "devDependencies": {
@@ -24,7 +24,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.1.0",
+    "eslint-config-next": "latest",
     "tailwindcss": "^4",
     "typescript": "^5",
     "wrangler": "^4.63.0"
